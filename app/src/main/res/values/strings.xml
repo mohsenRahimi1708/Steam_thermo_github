@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <string name="app_name">Steam IF97</string>
+    <string name="app_subtitle">IAPWS-IF97 water &amp; steam properties</string>
+
+    <string name="input_title">Operating point</string>
+    <string name="pressure_label">Pressure</string>
+    <string name="temperature_label">Temperature</string>
+    <string name="unit_bar">bar</string>
+    <string name="unit_celsius">°C</string>
+    <string name="unit_kj_kg" translatable="false">kJ/kg</string>
+    <string name="unit_kj_kgk" translatable="false">kJ/(kg·K)</string>
+    <string name="unit_m3_kg" translatable="false">m³/kg</string>
+    <string name="pressure_min_label">10 bar</string>
+    <string name="pressure_max_label">180 bar</string>
+    <string name="temperature_min_label">100 °C</string>
+    <string name="temperature_max_label">600 °C</string>
+
+    <string name="key_h">Enthalpy h</string>
+    <string name="key_s">Entropy s</string>
+    <string name="key_v">Spec. volume v</string>
+
+    <string name="results_title">Thermodynamic properties</string>
+    <string name="saturation_title">Saturation line at this pressure</string>
+    <string name="sat_caption">Saturated liquid (f) and saturated vapour (g) at the entered pressure.</string>
+    <string name="sat_caption_format">At %1$s bar: Tsat = %2$s °C, latent heat hfg = %3$s kJ/kg.</string>
+    <string name="sat_header_property">Property</string>
+    <string name="sat_header_liquid">Liquid (f)</string>
+    <string name="sat_header_vapour">Vapour (g)</string>
+
+    <string name="section_volumetric">Volumetric</string>
+    <string name="section_caloric">Caloric</string>
+    <string name="section_derived">Derived &amp; thermo-elastic</string>
+
+    <string name="region_line">IF97 region %1$d · p = %2$s bar · T = %3$s °C</string>
+    <string name="tsat_subcooled">Tsat at %1$s bar = %2$s °C — subcooled liquid, %3$s °C below saturation</string>
+    <string name="tsat_superheated">Tsat at %1$s bar = %2$s °C — superheated steam, %3$s °C above saturation</string>
+    <string name="tsat_saturated">Tsat at %1$s bar = %2$s °C — state lies on the saturation line</string>
+    <string name="no_saturation">Above the critical pressure (220.64 bar): no saturation line exists.</string>
+    <string name="no_state">Enter pressure and temperature</string>
+
+    <string name="footer">Properties from the IAPWS Industrial Formulation 1997 (R7-97, 2007 revision), regions 1–4. Runs fully offline; the app requests no network permission.</string>
+
+    <string name="error_pressure">Enter a pressure between 10 and 180 bar</string>
+    <string name="error_temperature">Enter a temperature between 100 and 600 °C</string>
+
+    <!-- About screen -->
+    <string name="about_title">About</string>
+    <string name="menu_about">About</string>
+    <string name="about_version">Version %1$s</string>
+    <string name="lang_english" translatable="false">English</string>
+    <string name="lang_persian" translatable="false">فارسی</string>
+    <string name="about_language_hint">The same explanation follows in both languages. The Persian block is laid out right-to-left.</string>
+
+    <string name="about_en" formatted="false" translatable="false"><b>Why this app exists</b>\nSteam IF97 turns a pressure and a temperature into the complete thermodynamic state of water and steam, using the IAPWS Industrial Formulation 1997 — the international standard behind power-plant cycle design, turbine testing and boiler engineering.\n\n<b>How to use it</b>\nType a pressure (10–180 bar) and a temperature (100–600 °C), or drag the two sliders. Every property updates as you type. The first card names the phase, the IF97 region and how far the state sits from the saturation line; the second lists every property; the third gives the saturated liquid and saturated vapour values at your pressure.\n\n<b>How the physics works</b>\nIF97 divides the water map into regions, each with its own fundamental equation. Region 1 (compressed liquid) and region 2 (superheated steam) are written as a Gibbs free energy in pressure and temperature. Region 3 — the narrow near-critical strip that begins around 165.3 bar — is written as a Helmholtz free energy in density and temperature, so the app first recovers the density by solving p(ρ, T) = p with a bracketed bisection on the correct single-phase branch. Region 4 is the saturation line (psat and Tsat), and the same equations supply the B23 boundary between regions 2 and 3. Every property is an analytic derivative of those fundamental equations: no curve fits, no interpolation tables.\n\n<b>Accuracy</b>\nIF97 reproduces the scientific IAPWS-95 formulation within the tolerances published in the release, about 0.01% in the main regions. This app is checked against the reference values of R7-97 (regions 1, 2, 3 and the saturation line) and against 386 independently computed states that cover the whole 10–180 bar / 100–600 °C grid.\n\n<b>Worth knowing</b>\nPressure and temperature fix a single phase, so on the saturation line the app shows the saturated liquid and vapour pair instead of a vapour quality. Above 220.64 bar there is no saturation line and the fluid is supercritical. Everything runs on the device: no network permission, no storage, no tracking.</string>
+
+    <string name="about_fa" formatted="false" translatable="false"><b>این برنامه چه می‌کند</b>\nاستیم IF97 فشار و دما را به حالت کامل ترمودینامیکی آب و بخار تبدیل می‌کند؛ بر پایهٔ فرمولاسیون صنعتی آب و بخار IAPWS-IF97، همان استانداردی که در طراحی سیکل نیروگاه، آزمون توربین و مهندسی دیگ بخار به کار می‌رود.\n\n<b>نحوهٔ استفاده</b>\nفشار (۱۰ تا ۱۸۰ بار) و دما (۱۰۰ تا ۶۰۰ درجهٔ سلسیوس) را تایپ کنید یا دو لغزنده را بکشید. همهٔ خواص هم‌زمان به‌روز می‌شوند. کارت نخست فاز، ناحیهٔ IF97 و فاصلهٔ حالت تا خط اشباع را نشان می‌دهد؛ کارت دوم همهٔ خواص را فهرست می‌کند و کارت سوم مقادیر مایع اشباع و بخار اشباع را در همان فشار می‌دهد.\n\n<b>فیزیک ماجرا</b>\nIF97 نقشهٔ آب را به ناحیه‌هایی تقسیم می‌کند که هر یک معادلهٔ بنیادین خود را دارد. ناحیهٔ ۱ (مایع فشرده) و ناحیهٔ ۲ (بخار داغ) بر پایهٔ انرژی آزاد گیبس برحسب فشار و دما نوشته شده‌اند. ناحیهٔ ۳ — نوار باریک نزدیک نقطهٔ بحرانی که از حدود ۱۶۵٫۳ بار آغاز می‌شود — با انرژی آزاد هلمهولتز برحسب چگالی و دما بیان می‌شود؛ از این رو برنامه نخست چگالی را با حل معادلهٔ p(ρ, T) = p و روش دوبخشی روی شاخهٔ درست تک‌فاز به دست می‌آورد. ناحیهٔ ۴ خط اشباع است و همان معادلات، مرز B23 میان نواحی ۲ و ۳ را نیز می‌دهند. هر خاصیت از مشتق تحلیلی همین معادلات محاسبه می‌شود؛ بدون برازش منحنی و بدون جدول درون‌یابی.\n\n<b>دقت</b>\nIF97 فرمولاسیون علمی IAPWS-95 را در محدودهٔ خطای اعلام‌شده بازتولید می‌کند (حدود ۰٫۰۱ درصد در نواحی اصلی). این برنامه با مقادیر مرجع انتشار R7-97 (نواحی ۱، ۲، ۳ و خط اشباع) و با ۳۸۶ حالت که به‌طور مستقل برای کل شبکهٔ ۱۰ تا ۱۸۰ بار و ۱۰۰ تا ۶۰۰ درجه محاسبه شده‌اند، صحت‌سنجی شده است.\n\n<b>نکته‌های کاربردی</b>\nفشار و دما تنها یک فاز را مشخص می‌کنند؛ بنابراین روی خط اشباع، برنامه به‌جای کیفیت بخار، زوج مایع اشباع و بخار اشباع را نشان می‌دهد. بالای ۲۲۰٫۶۴ بار خط اشباعی وجود ندارد و سیال فوق‌بحرانی است. همهٔ محاسبات روی خود دستگاه انجام می‌شود: بدون دسترسی به اینترنت، بدون ذخیره‌سازی و بدون ردیابی.</string>
+
+    <string name="about_credits">Formulation: IAPWS R7-97 (2007 revision). Bibliographic references and the verification data ship with the source code.</string>
+</resources>

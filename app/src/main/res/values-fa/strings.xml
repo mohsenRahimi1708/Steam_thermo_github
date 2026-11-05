@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">استیم IF97</string>
+    <string name="app_subtitle">خواص آب و بخار بر پایهٔ IAPWS-IF97</string>
+
+    <string name="input_title">نقطهٔ کارکرد</string>
+    <string name="pressure_label">فشار</string>
+    <string name="temperature_label">دما</string>
+    <string name="unit_bar">بار</string>
+    <string name="unit_celsius">°C</string>
+    <string name="pressure_min_label">۱۰ بار</string>
+    <string name="pressure_max_label">۱۸۰ بار</string>
+    <string name="temperature_min_label">۱۰۰ °C</string>
+    <string name="temperature_max_label">۶۰۰ °C</string>
+
+    <string name="key_h">آنتالپی h</string>
+    <string name="key_s">آنتروپی s</string>
+    <string name="key_v">حجم مخصوص v</string>
+
+    <string name="results_title">خواص ترمودینامیکی</string>
+    <string name="saturation_title">خط اشباع در این فشار</string>
+    <string name="sat_caption">مایع اشباع (f) و بخار اشباع (g) در فشار واردشده.</string>
+    <string name="sat_caption_format">در %1$s بار: Tsat = %2$s °C، گرمای نهان hfg = %3$s کیلوژول بر کیلوگرم.</string>
+    <string name="sat_header_property">خاصیت</string>
+    <string name="sat_header_liquid">مایع (f)</string>
+    <string name="sat_header_vapour">بخار (g)</string>
+
+    <string name="section_volumetric">حجمی</string>
+    <string name="section_caloric">کالری</string>
+    <string name="section_derived">مشتق‌شده و ترموالاستیک</string>
+
+    <string name="region_line">ناحیهٔ %1$d در IF97 · p = %2$s مگاپاسکال · T = %3$s کلوین</string>
+    <string name="tsat_subcooled">دمای اشباع در %1$s بار = %2$s °C — مایع زیراشباع، %3$s کلوین زیر خط اشباع</string>
+    <string name="tsat_superheated">دمای اشباع در %1$s بار = %2$s °C — بخار داغ، %3$s کلوین بالای خط اشباع</string>
+    <string name="tsat_saturated">دمای اشباع در %1$s بار = %2$s °C — حالت روی خط اشباع است</string>
+    <string name="no_saturation">بالاتر از فشار بحرانی (۲۲٫۰۶۴ مگاپاسکال) خط اشباعی وجود ندارد.</string>
+    <string name="no_state">فشار و دما را وارد کنید</string>
+
+    <string name="footer">خواص بر پایهٔ فرمولاسیون صنعتی IAPWS-IF97 (R7-97، بازنگری ۲۰۰۷)، نواحی ۱ تا ۴. کاملاً آفلاین؛ برنامه اجازهٔ دسترسی به شبکه را درخواست نمی‌کند.</string>
+
+    <string name="error_pressure">فشاری بین ۱۰ تا ۱۸۰ بار وارد کنید</string>
+    <string name="error_temperature">دمایی بین ۱۰۰ تا ۶۰۰ درجهٔ سلسیوس وارد کنید</string>
+
+    <string name="about_title">دربارهٔ برنامه</string>
+    <string name="menu_about">درباره</string>
+    <string name="about_version">نسخهٔ %1$s</string>
+    <string name="about_language_hint">همین توضیح به هر دو زبان آمده است. بخش فارسی از راست به چپ چیده شده است.</string>
+    <string name="about_credits">فرمولاسیون: IAPWS R7-97 (بازنگری ۲۰۰۷). مراجع و داده‌های صحت‌سنجی همراه کد منبع ارائه شده‌اند.</string>
+</resources>

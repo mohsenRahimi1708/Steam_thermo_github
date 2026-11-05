@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="brand_primary">#0B5E7A</color>
+    <color name="brand_primary_dark">#073F53</color>
+    <color name="brand_primary_container">#C7E7F4</color>
+    <color name="brand_on_primary_container">#001E29</color>
+    <color name="brand_accent">#E8873A</color>
+    <color name="brand_accent_dark">#B65F16</color>
+
+    <color name="phase_liquid">#1565C0</color>
+    <color name="phase_vapour">#B3261E</color>
+    <color name="phase_critical">#6A1B9A</color>
+
+</resources>
